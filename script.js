@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 });
+
 document.addEventListener('DOMContentLoaded', () => {
+    showSpinner(true, document.getElementById("countries-container"));
     fetch('https://restcountries.com/v3.1/all')
         .then(response => response.json())
         .then(data => {
@@ -42,7 +44,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 countryDiv.append(populationInfo);
 
                 container.append(countryDiv);
+                
             });
+            showSpinner(false, document.getElementById("countries-container"));
         })
 });
+let atTop = true;
+function toggleScroll() {
+    if (atTop) {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+        document.getElementById('scrollButton').textContent = 'Scroll to Top';
+    } else {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        document.getElementById('scrollButton').textContent = 'Scroll to Bottom';
+    }
+    atTop = !atTop;
+}
+const botton = document.getElementById("scrollButton");
+botton.onclick = toggleScroll;
 

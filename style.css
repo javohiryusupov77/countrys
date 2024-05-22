@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    height: 2000px;
+}
 
 header {
     background-color:black;
@@ -235,11 +238,21 @@ body {
     animation-duration: 1s;
     animation-timing-function: linear;
   }
-  
-  
-  
   @keyframes spin {
     to {
       transform: rotateZ(360deg);
     }
   }
+  #scrollButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ 
+  
