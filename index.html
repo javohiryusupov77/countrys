@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Country</title>
     <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./utils.js"></script>
     <script type="module" src="script.js"></script>
 </head>
-
 <body>
+    <main>
     <header>
         <div class="container">
             <div class="logo">
@@ -24,16 +25,16 @@
                 </ul>
             </nav>
             <div class="search-container">
-                <input type="text" placeholder="Search...">
+                <input id="countryInput" type="text" placeholder="enter the counter name">
+                <button id="result">Search</button>
             </div>
             <div class="menu-toggle">
-                <span></span>
+                <span></span> 
                 <span></span>
                 <span></span>
             </div>
         </div>
     </header>
-    <main>
         <div id="countries-container"></div>
         <footer class="footer">
             <div class="container">
