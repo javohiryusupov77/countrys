@@ -55,7 +55,7 @@ function toggleScroll() {
         window.scrollTo({
             top: document.body.scrollHeight,
             behavior: 'smooth'
-        });
+        })
         document.getElementById('scrollButton').textContent = 'Scroll to Top';
     } else {
         window.scrollTo({
